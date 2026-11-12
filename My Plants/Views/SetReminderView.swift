@@ -6,10 +6,30 @@
 //
 
 import SwiftUI
-
 struct SetReminderView: View {
+    
+    @State private var plantName = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+                Section {
+                    HStack{
+                    Text("Plant Name")
+                    TextField("Pothos", text: $plantName)
+                }
+            }
+            Section {
+                Label("Room", systemImage: "location")
+                    
+                Label("Light", systemImage: "sun.max")
+            }
+            
+            Section {
+                Label("Watering Days", systemImage: "drop")
+
+                Label("Water", systemImage: "drop")
+
+            }
+        }
     }
 }
 
